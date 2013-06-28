@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:layout_weight="1"
+	android:background="@color/white" android:orientation="vertical">
+
+	<!-- 头部 -->
+	<include android:id="@+id/head_ymk" layout="@layout/home_header_ymk" android:visibility="gone" />
+	<include android:id="@+id/head_pmp" layout="@layout/home_header_pmp" android:visibility="gone"/>
+	<!-- 内容 -->
+	<!-- android:layout_weight可以将尾部固定在屏幕下方 -->
+
+	<ViewFlipper android:id="@+id/flipper"
+		android:layout_width="fill_parent" android:layout_height="0dp"
+		android:layout_weight="1.0" />
+
+
+	<!-- 尾部 -->
+
+	<include layout="@layout/home_footer" />
+
+</LinearLayout>

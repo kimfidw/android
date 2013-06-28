@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 头部 -->
+
+    <include
+        android:id="@+id/head_pmp"
+        layout="@layout/home_header" />
+    <!-- 内容 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/content_pmp"
+            layout="@layout/mxlist" />
+
+    </LinearLayout>
+
+</LinearLayout>

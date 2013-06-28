@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="#ffffff"
+    android:orientation="horizontal" >
+
+	<RelativeLayout 
+	    android:id="@+id/pmk_item"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    >
+	    <TextView 
+	        android:id="@+id/tvLabel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="盘点编号:"
+	        android:textSize="22sp"
+	        />
+	    <TextView
+        android:id="@+id/textView_item"
+        android:layout_toRightOf="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="22sp"
+        android:text = "11"
+         />
+	    <TextView
+	        android:id="@+id/pdTimeLabel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/tvLabel"
+	        android:text="盘点时间:"
+	        android:textSize="22sp"
+	        /> 
+	    <TextView 
+	        android:id="@+id/pdTime"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:layout_toRightOf="@+id/pdTimeLabel"
+	        android:layout_below="@+id/textView_item"
+	        android:layout_marginLeft="10dp"
+	        android:text = "22"
+	        android:textSize="22sp"
+	        />  
+	    
+	</RelativeLayout>
+    
+
+</LinearLayout>

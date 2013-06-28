@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_footer"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/widget_bar_bg_n"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <RadioButton 
+		android:id="@+id/home_footbar_first"
+		style="@style/home_footbar_radio"
+		android:drawableTop="@drawable/widget_bar_first"
+		android:button="@null"
+		android:gravity="center"
+		android:paddingLeft="5dp"
+		android:text="@string/first"
+		/>
+	<ImageView
+		style="@style/main_footbar_cutline"
+		android:src="@drawable/widget_bar_cut_off"/>
+	<RadioButton 
+		android:id="@+id/home_footbar_second"
+		style="@style/home_footbar_radio"
+		android:drawableTop="@drawable/widget_bar_first"
+		android:button="@null"
+		android:gravity="center"
+		android:paddingLeft="5dp"
+		android:text="@string/second"
+		/>
+	<ImageView
+		style="@style/main_footbar_cutline"
+		android:src="@drawable/widget_bar_cut_off"/>
+	
+
+</LinearLayout>

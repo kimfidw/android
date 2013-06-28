@@ -1,0 +1,159 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/addpd_header" />
+
+    <ViewSwitcher
+        android:id="@+id/logindialog_view_switcher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="350dp"
+            android:layout_marginLeft="15.0px"
+            android:layout_marginRight="15.0px"
+            android:layout_marginTop="62.0px" >
+
+            <!-- 工厂名 -->
+            <EditText
+                android:id="@+id/pd_edit_pdcode"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="5.0px"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:background="@drawable/qq_edit_login"
+                android:editable="false"
+                android:maxLength="4"
+                android:paddingLeft="80.0sp"
+                android:saveEnabled="true" />
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pd_edit_pdcode"
+                android:layout_alignLeft="@+id/pd_edit_pdcode"
+                android:layout_alignTop="@+id/pd_edit_pdcode"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="7.0sp"
+                android:text="@string/pdcode"
+                android:textColor="#ff3f3f3f"
+                android:textSize="16.0dip" />
+
+            <!-- 盘点编号 -->
+            <EditText
+                android:id="@+id/pd_edit_pdnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/pd_edit_pdcode"
+                android:layout_alignRight="@+id/pd_edit_pdcode"
+                android:layout_below="@+id/pd_edit_pdcode"
+                
+                android:background="@drawable/qq_edit_login"
+                android:hint="@string/pd_num"
+                android:maxLength="10"
+                android:paddingLeft="80.0sp"
+                android:saveEnabled="true" />
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pd_edit_pdnum"
+                android:layout_alignLeft="@+id/pd_edit_pdnum"
+                android:layout_alignTop="@+id/pd_edit_pdnum"
+                android:layout_below="@+id/pd_edit_pdnum"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="7.0sp"
+                android:text="@string/pdnum"
+                android:textColor="#ff3f3f3f"
+                android:textSize="16.0dip" />
+            
+            <!-- 盘点时间 -->
+            <EditText
+                android:id="@+id/pd_edit_pdtime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/pd_edit_pdcode"
+                android:layout_alignRight="@+id/pd_edit_pdcode"
+                android:layout_below="@+id/pd_edit_pdnum"
+                android:background="@drawable/qq_edit_login"
+                android:layout_marginBottom="15dp"
+                android:hint="@string/pd_time"
+                android:editable="false"
+                android:maxLength="6"
+                android:paddingLeft="80.0sp"
+                android:saveEnabled="true" />
+
+            <TextView
+                android:id="@+id/TextView03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pd_edit_pdtime"
+                android:layout_alignLeft="@+id/pd_edit_pdtime"
+                android:layout_alignTop="@+id/pd_edit_pdtime"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="7.0sp"
+                android:text="@string/pdtime"
+                android:textColor="#ff3f3f3f"
+                android:textSize="16.0dip" />
+            
+            <!-- 备注 -->
+            <TextView
+                android:id="@+id/TextView04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/pd_edit_pdnum"
+                android:layout_alignRight="@+id/TextView03"
+                android:layout_alignTop="@+id/pd_edit_memo"
+                android:gravity="top"
+                android:paddingLeft="7.0sp"
+                android:text="@string/pd_memo"
+                android:textColor="#ff3f3f3f"
+                android:textSize="16.0dip" />
+
+            <EditText
+                android:id="@+id/pd_edit_memo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/pd_edit_pdnum"
+                android:layout_below="@+id/pd_edit_pdtime"
+                android:background="@drawable/memo_bg"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:maxLength="40" />
+
+            <Button
+                android:id="@+id/pd_btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/pd_edit_pdcode"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/pd_edit_pdcode"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/widget_btn_bg" />
+
+            <TextView
+                style="@style/home_head_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/pd_btn_save"
+                android:layout_alignBottom="@+id/pd_btn_save"
+                android:layout_centerHorizontal="true"
+                android:text="@string/btn_save"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </ViewSwitcher>
+
+</LinearLayout>

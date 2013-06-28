@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.pdapp"
+    android:versionCode="1"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="5"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.android.pdapp.ui.LoginActivity" >
+        </activity>
+        <activity android:name="com.android.pdapp.ui.AddPDActivity" >
+        </activity>
+        <activity android:name="com.android.pdapp.ui.AddMXActivity" >
+        </activity>
+        <activity android:name="com.android.pdapp.ui.PdInfoActivity" >
+        </activity>
+        <activity
+            android:name="com.android.pdapp.app.AppStart"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.android.pdapp.LoadPagingActivity" >
+        </activity>
+        <activity android:name="com.android.pdapp.LVFlashActivity" >
+        </activity>
+        <activity
+            android:name="com.android.pdapp.ui.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity android:name="com.android.pdapp.ui.HomeActivity" >
+        </activity>
+        <activity
+            android:name="com.android.pdapp.ui.LoadingActivity"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+    </application>
+
+    <!-- 定义用户上网权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 读写SD卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 允许使用闪光灯 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- 允许访问网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

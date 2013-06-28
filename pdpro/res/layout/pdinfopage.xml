@@ -1,0 +1,356 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/pdinfo_header" />
+
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="vertical"
+        >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="15.0px"
+        android:layout_marginRight="15.0px"
+        android:layout_marginTop="60.0px">
+
+        <!-- 盘点编号 -->
+        <EditText
+            android:id="@+id/pd_edit_pdnum"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="8.0px"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:layout_marginTop="5.0dip"
+            android:background="@drawable/qq_edit_login"
+            android:editable="false"
+            android:paddingLeft="80.0sp"
+            android:saveEnabled="true" />
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pd_edit_pdnum"
+            android:layout_alignLeft="@+id/pd_edit_pdnum"
+            android:layout_alignTop="@+id/pd_edit_pdnum"
+            android:layout_marginRight="15.0sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="7.0sp"
+            android:text="@string/pdnum"
+            android:textColor="#ff3f3f3f"
+            android:textSize="16.0dip" />
+
+        <!-- 条码编号 -->
+        <EditText
+            android:id="@+id/pd_edit_trkno"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pd_edit_pdnum"
+            android:layout_alignRight="@+id/pd_edit_pdnum"
+            android:layout_below="@+id/pd_edit_pdnum"
+            android:layout_marginBottom="8.0px"
+            android:background="@drawable/qq_edit_login"
+            android:editable="false"
+            android:maxLength="10"
+            android:paddingLeft="80.0sp"
+            android:saveEnabled="true" />
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pd_edit_trkno"
+            android:layout_alignLeft="@+id/pd_edit_trkno"
+            android:layout_alignTop="@+id/pd_edit_trkno"
+            android:layout_marginRight="15.0sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="7.0sp"
+            android:text="@string/pdtrkno"
+            android:textColor="#ff3f3f3f"
+            android:textSize="16.0dip" />
+
+        <!-- 工厂名 -->
+        <EditText
+            android:id="@+id/pd_edit_plant"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pd_edit_pdnum"
+            android:layout_alignRight="@+id/pd_edit_pdnum"
+            android:layout_below="@+id/pd_edit_trkno"
+            android:layout_marginBottom="8.0px"
+            android:background="@drawable/qq_edit_login"
+            android:editable="false"
+            android:paddingLeft="80.0sp"
+            android:saveEnabled="true" />
+        <TextView
+            android:id="@+id/TextView03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pd_edit_plant"
+            android:layout_alignLeft="@+id/pd_edit_plant"
+            android:layout_alignTop="@+id/pd_edit_plant"
+            android:layout_marginRight="15.0sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="7.0sp"
+            android:text="@string/pd_plant"
+            android:textColor="#ff3f3f3f"
+            android:textSize="16.0dip" />
+        
+        <!-- 条码类型 -->
+        <EditText
+            android:id="@+id/pd_edit_bartyp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pd_edit_pdnum"
+            android:layout_alignRight="@+id/pd_edit_pdnum"
+            android:layout_below="@+id/pd_edit_plant"
+            android:layout_marginBottom="8.0px"
+            android:background="@drawable/qq_edit_login"
+            android:editable="false"
+            android:paddingLeft="80.0sp"
+            android:saveEnabled="true" />
+        <TextView
+            android:id="@+id/TextView04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pd_edit_bartyp"
+            android:layout_alignLeft="@+id/pd_edit_bartyp"
+            android:layout_alignTop="@+id/pd_edit_bartyp"
+            android:layout_marginRight="15.0sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="7.0sp"
+            android:text="@string/pd_bartyp"
+            android:textColor="#ff3f3f3f"
+            android:textSize="16.0dip" />
+        
+        <!-- 品种 -->
+        <EditText
+            android:id="@+id/pd_edit_pdcno"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pd_edit_pdnum"
+            android:layout_alignRight="@+id/pd_edit_pdnum"
+            android:layout_below="@+id/pd_edit_bartyp"
+            android:layout_marginBottom="8.0px"
+            android:background="@drawable/qq_edit_login"
+            android:editable="false"
+            android:paddingLeft="80.0sp"
+            android:saveEnabled="true" />
+        <TextView
+            android:id="@+id/TextView05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pd_edit_pdcno"
+            android:layout_alignLeft="@+id/pd_edit_pdcno"
+            android:layout_alignTop="@+id/pd_edit_pdcno"
+            android:layout_marginRight="15.0sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="7.0sp"
+            android:text="@string/pd_pdcno"
+            android:textColor="#ff3f3f3f"
+            android:textSize="16.0dip" />
+        
+        <!-- 机台 -->
+        <EditText
+            android:id="@+id/pd_edit_Npmno"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pd_edit_pdnum"
+            android:layout_alignRight="@+id/pd_edit_pdnum"
+            android:layout_below="@+id/pd_edit_pdcno"
+            android:layout_marginBottom="8.0px"
+            android:background="@drawable/qq_edit_login"
+            android:editable="false"
+            android:paddingLeft="80.0sp"
+            android:saveEnabled="true" />
+        <TextView
+            android:id="@+id/TextView06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pd_edit_Npmno"
+            android:layout_alignLeft="@+id/pd_edit_Npmno"
+            android:layout_alignTop="@+id/pd_edit_Npmno"
+            android:layout_marginRight="15.0sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="7.0sp"
+            android:text="@string/pd_npmno"
+            android:textColor="#ff3f3f3f"
+            android:textSize="16.0dip" />
+        
+        <!-- 克重 -->
+        <EditText
+            android:id="@+id/pd_edit_psqwt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pd_edit_pdnum"
+            android:layout_alignRight="@+id/pd_edit_pdnum"
+            android:layout_below="@+id/pd_edit_Npmno"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/qq_edit_login"
+            android:editable="false"
+            android:paddingLeft="80.0sp"
+            android:saveEnabled="true" />
+        <TextView
+            android:id="@+id/TextView07"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pd_edit_psqwt"
+            android:layout_alignLeft="@+id/pd_edit_psqwt"
+            android:layout_alignTop="@+id/pd_edit_psqwt"
+            android:layout_marginRight="15.0sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="7.0sp"
+            android:text="@string/psqwt"
+            android:textColor="#ff3f3f3f"
+            android:textSize="16.0dip" />
+        
+        <!-- 理论幅宽 -->
+        <EditText
+            android:id="@+id/pd_edit_widcal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pd_edit_pdnum"
+            android:layout_alignRight="@+id/pd_edit_pdnum"
+            android:layout_below="@+id/pd_edit_psqwt"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/qq_edit_login"
+            android:editable="false"
+            android:maxLength="10"
+            android:paddingLeft="80.0sp"
+            android:saveEnabled="true" />
+        <TextView
+            android:id="@+id/TextView08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pd_edit_widcal"
+            android:layout_alignLeft="@+id/pd_edit_widcal"
+            android:layout_alignTop="@+id/pd_edit_widcal"
+            android:layout_marginRight="15.0sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="7.0sp"
+            android:text="@string/pd_widcal"
+            android:textColor="#ff3f3f3f"
+            android:textSize="16.0dip" />
+        
+        <!-- 理论线长 -->
+        <EditText
+            android:id="@+id/pd_edit_lencal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pd_edit_pdnum"
+            android:layout_alignRight="@+id/pd_edit_pdnum"
+            android:layout_below="@+id/pd_edit_widcal"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/qq_edit_login"
+            android:editable="false"
+            android:maxLength="10"
+            android:paddingLeft="80.0sp"
+            android:saveEnabled="true" />
+        <TextView
+            android:id="@+id/TextView08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pd_edit_lencal"
+            android:layout_alignLeft="@+id/pd_edit_lencal"
+            android:layout_alignTop="@+id/pd_edit_lencal"
+            android:layout_marginRight="15.0sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="7.0sp"
+            android:text="@string/pd_lencal"
+            android:textColor="#ff3f3f3f"
+            android:textSize="16.0dip" />
+        
+        <!-- 理论重量 -->
+        <EditText
+            android:id="@+id/pd_edit_amcal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pd_edit_pdnum"
+            android:layout_alignRight="@+id/pd_edit_pdnum"
+            android:layout_below="@+id/pd_edit_lencal"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/qq_edit_login"
+            android:editable="false"
+            android:maxLength="10"
+            android:paddingLeft="80.0sp"
+            android:saveEnabled="true" />
+        <TextView
+            android:id="@+id/TextView09"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pd_edit_amcal"
+            android:layout_alignLeft="@+id/pd_edit_amcal"
+            android:layout_alignTop="@+id/pd_edit_amcal"
+            android:layout_marginRight="15.0sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="7.0sp"
+            android:text="@string/pd_amcal"
+            android:textColor="#ff3f3f3f"
+            android:textSize="16.0dip" />
+        
+        <!-- 实际重量 -->
+        <EditText
+            android:id="@+id/pd_edit_amcat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pd_edit_pdnum"
+            android:layout_alignRight="@+id/pd_edit_pdnum"
+            android:layout_below="@+id/pd_edit_amcal"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/qq_edit_login"
+            android:editable="false"
+            android:maxLength="10"
+            android:paddingLeft="80.0sp"
+            android:saveEnabled="true" />
+        <TextView
+            android:id="@+id/TextView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pd_edit_amcat"
+            android:layout_alignLeft="@+id/pd_edit_amcat"
+            android:layout_alignTop="@+id/pd_edit_amcat"
+            android:layout_marginRight="15.0sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="7.0sp"
+            android:text="@string/pd_amcat"
+            android:textColor="#ff3f3f3f"
+            android:textSize="16.0dip" />
+        
+        <!-- 盘点人 -->
+        <EditText
+            android:id="@+id/pd_edit_whoname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pd_edit_pdnum"
+            android:layout_alignRight="@+id/pd_edit_pdnum"
+            android:layout_below="@+id/pd_edit_amcat"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/qq_edit_login"
+            android:editable="false"
+            android:maxLength="10"
+            android:paddingLeft="80.0sp"
+            android:saveEnabled="true" />
+        <TextView
+            android:id="@+id/TextView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pd_edit_whoname"
+            android:layout_alignLeft="@+id/pd_edit_whoname"
+            android:layout_alignTop="@+id/pd_edit_whoname"
+            android:layout_marginRight="15.0sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="7.0sp"
+            android:text="@string/pd_whoname"
+            android:textColor="#ff3f3f3f"
+            android:textSize="16.0dip" />
+        
+
+    </RelativeLayout>
+</ScrollView>
+</LinearLayout>

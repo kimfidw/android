@@ -1,0 +1,180 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+	<include layout="@layout/addmx_header"/>
+	<ViewSwitcher
+        android:id="@+id/logindialog_view_switcher"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="350dp"
+            android:layout_marginLeft="15.0px"
+            android:layout_marginRight="15.0px"
+            android:layout_marginTop="62.0px" >
+
+            <!-- 盘点编号 -->
+
+            <EditText
+                android:id="@+id/pd_edit_pdnum"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="8.0px"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:background="@drawable/qq_edit_login"
+                android:inputType="text"
+                android:maxLength="4"
+                android:paddingLeft="80.0sp"
+                android:saveEnabled="true" />
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pd_edit_pdnum"
+                android:layout_alignLeft="@+id/pd_edit_pdnum"
+                android:layout_alignTop="@+id/pd_edit_pdnum"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="7.0sp"
+                android:text="@string/pdnum"
+                android:textColor="#ff3f3f3f"
+                android:textSize="16.0dip" />
+
+            <!-- 条码编号 -->
+
+            <EditText
+                android:id="@+id/pd_edit_trkno"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/pd_edit_pdnum"
+                android:layout_below="@+id/pd_edit_pdnum"
+                android:layout_alignRight="@+id/pd_edit_pdnum"
+                android:layout_marginBottom="8.0px"
+                android:background="@drawable/qq_edit_login"
+                android:hint="@string/pd_trkno"
+                android:inputType="text"
+                android:maxLength="10"
+                android:paddingLeft="80.0sp" />
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pd_edit_trkno"
+                android:layout_alignLeft="@+id/pd_edit_trkno"
+                android:layout_alignTop="@+id/pd_edit_trkno"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="7.0sp"
+                android:text="@string/pdtrkno"
+                android:textColor="#ff3f3f3f"
+                android:textSize="16.0dip" />
+			
+            <Button
+                android:id="@+id/capture_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/pd_edit_pdnum"
+                android:layout_below="@+id/pd_edit_trkno"
+                android:layout_alignRight="@+id/pd_edit_pdnum"
+                android:layout_marginBottom="8.0px"
+                android:text="@string/capture_text" >
+			</Button>
+                
+            
+            <!-- 克重 -->
+            <EditText
+                android:id="@+id/pd_edit_amact"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/pd_edit_pdnum"
+                android:layout_alignRight="@+id/pd_edit_pdnum"
+                android:layout_below="@+id/capture_button"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/qq_edit_login"
+                android:inputType="text"
+                android:maxLength="5"
+                android:paddingLeft="80.0sp"
+                android:saveEnabled="true" />
+
+            <TextView
+                android:id="@+id/TextView03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pd_edit_amact"
+                android:layout_alignLeft="@+id/pd_edit_amact"
+                android:layout_alignTop="@+id/pd_edit_amact"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="7.0sp"
+                android:text="@string/psqwt"
+                android:textColor="#ff3f3f3f"
+                android:textSize="16.0dip" />
+
+            <!-- 保存按钮 -->
+
+            <Button
+                android:id="@+id/pd_btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/pd_edit_pdnum"
+                android:layout_alignRight="@+id/pd_edit_pdnum"
+                android:layout_below="@+id/pd_edit_amact"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/widget_btn_bg" />
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/home_head_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/pd_btn_save"
+                android:layout_alignBottom="@+id/pd_btn_save"
+                android:layout_centerHorizontal="true"
+                android:text="@string/btn_save"
+                android:textColor="@color/white" />
+
+            <!-- 分割线 -->
+
+            <ImageView
+                android:id="@+id/seprate_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/pd_edit_pdnum"
+                android:layout_alignRight="@+id/pd_edit_pdnum"
+                android:layout_below="@+id/pd_btn_save"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/seprator_line" />
+
+            <!-- 已盘点记录条数 -->
+
+            <TextView
+                android:id="@+id/pd_edit_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/pd_edit_pdnum"
+                android:layout_below="@+id/seprate_line"
+                android:text="@string/pd_all" />
+
+            <TextView
+                android:id="@+id/pdcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/pd_edit_all"
+                android:layout_toRightOf="@+id/pd_edit_all"
+                android:gravity="center_vertical"
+                android:textColor="#ff3f3f3f"
+                android:textSize="16.0dip" />
+
+        </RelativeLayout>
+
+    </ViewSwitcher>
+</LinearLayout>

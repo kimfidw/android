@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="40dip"
+    android:background="@drawable/head_background"
+     >
+
+    <ImageButton 
+        android:id = "@+id/pmk_add"
+        android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_marginLeft="2.0dip"
+		android:background="@drawable/left"
+        />
+    
+    <TextView
+        android:id="@+id/pmk_add_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/pmk_add"
+        android:layout_marginRight="19.0sp"
+        android:text="@string/pmk_add"
+        android:textColor="@color/white"
+        ></TextView>
+	
+    
+    <TextView
+        android:id="@+id/head_title"
+        style="@style/home_head_title"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/home_title" />
+    
+    <ImageButton
+    	android:id="@+id/head_add"
+  		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="2.0dip"
+		android:background="@drawable/right"
+		/>
+    
+    <TextView
+        android:id="@+id/pmp_add_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/head_add"
+        android:layout_marginLeft="19.0sp"
+        android:text="@string/pmp_add"
+        android:textColor="@color/white"
+        ></TextView>
+
+    
+
+</RelativeLayout>
